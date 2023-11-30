@@ -1,0 +1,13 @@
+<form #frm1="ngForm" (ngSubmit)="onSubmit(frm1.value)"   class="col-6 m-auto">
+    <p><label>Username</label>
+         <input name="username" [(ngModel)]="username" required maxlength="10"  class="form-control" type="text" #loiun="ngModel"  ></p>
+         <em *ngIf="loiun.invalid" class="text-danger ng-invalid"> 
+          Vui lòng nhập Username.  
+       </em>
+    <p><label>Password</label>
+
+         <input name="password" [(ngModel)]="password" class="form-control" type="password"> 
+    </p>
+    <p><button type="submit" class="btn btn-success">Đăng nhập</button> </p>
+    </form>
+
