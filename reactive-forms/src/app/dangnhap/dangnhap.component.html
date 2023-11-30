@@ -1,0 +1,20 @@
+<form [formGroup]="frm1" class="col-6 m-auto" >
+    <p>
+        <input formControlName="username"  type="text" name="username" class="form-control"> 
+
+        <em *ngIf="frm1.controls['username']?.errors" class="text-danger" >
+            Username từ 3 đến 10 ký tự nhe
+          </em>
+    </p>
+    <p>
+        <input formControlName="password"  type="password" name="username" class="form-control">
+
+        <em *ngIf="frm1.controls['password']?.errors?.['minlength']['actualLength']<
+        frm1.controls['password']?.errors?.['minlength']['requiredLength']" class="text-danger">
+          Mật khẩu ít nhất 8 ký tự
+        </em>
+    </p>
+    <p><button type="submit" class="btn btn-danger px-4 py-2"> Submit </button> </p>
+   </form>
+
+ 

@@ -1,0 +1,22 @@
+<form [formGroup]="frm1" class="col-md-6 m-auto border border-success p-2">
+    <p> Tên Laptop 
+        <input formControlName="tenlt" type="text" name="tenlt" class="form-control"> </p>
+    <p> Giá Laptop 
+        <input formControlName="gialt" type="number" name="gialt" class="form-control"> </p>
+    <p>Tình trạng
+        <input type="radio" value="hangmoi" formControlName="status">Mới sản xuất
+        <input type="radio" value="xairoi" formControlName="status">Qua sử dụng
+    </p>
+    <p> Khuyến mãi
+        <label><input type="checkbox" formControlName="kmbalo"> Balo </label> &nbsp; 
+        <label><input type="checkbox" formControlName="kemoffile"> Mua kèm Office </label> &nbsp; 
+        <label><input type="checkbox" formControlName="kmchuot"> Chuột Genius </label>
+    </p>
+    <p> Nhà SX
+        <select formControlName="nhasx" name="nhasx" class="form-control">
+            <option value="0">Chọn nhà sản xuát</option>
+            <option value="1">Dell</option>
+            <option value="2">HP</option>
+        </select></p>
+    <p> <button class="btn btn-success p-2">Thêm</button> </p>
+    </form>
